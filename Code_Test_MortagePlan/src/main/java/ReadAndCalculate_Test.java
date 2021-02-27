@@ -18,6 +18,10 @@ public class ReadAndCalculate_Test {
         assertEquals(false,test.doCalculations(data4));
         String[] data5={"","4.5","5.6","c"};
         assertEquals(false,test.doCalculations(data5));
+        String[] data6={"","4.5","5.6","5.5"};
+        assertEquals(false,test.doCalculations(data6));
+        String[] data7={"","4.5","5.6","5",""};
+        assertEquals(false,test.doCalculations(data7));
 
     }
 }
