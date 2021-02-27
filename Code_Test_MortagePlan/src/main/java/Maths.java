@@ -10,13 +10,14 @@ public class Maths {
             this.interest=1+interest/100;
             this.amount=amount;
             this.time=time;
+
         }
         //uses the formula provided and calculates the monthly paymenent and returns it
-        public double calculatePayement(){
+        public String calculatePayement(){
             calculateMonthlyIntrestrate();
             double payement=amount*((minterest-1)*pow(minterest,time*12))/(pow(minterest,time*12)-1);
             DecimalFormat toPay=new DecimalFormat("#.##");
-            return Double.parseDouble(toPay.format(payement));
+            return toPay.format(payement);
         }
 
         //calculates monthly interest rate with accuracy of 0.000001

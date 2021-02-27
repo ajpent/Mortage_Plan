@@ -1,7 +1,7 @@
 import com.opencsv.CSVReader;
+
 import java.io.File;
 import java.io.FileReader;
-import java.sql.SQLOutput;
 
 
 public class ReadAndCalculate {
@@ -13,7 +13,7 @@ public class ReadAndCalculate {
         //reading file
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource("prospects.txt").getFile());
-        CSVReader reader ;
+        CSVReader reader;
         try
         {
             //parsing a CSV file into CSVReader class constructor
@@ -50,9 +50,7 @@ public class ReadAndCalculate {
         if(data.length==4) {
             try {
                 math.maths(Double.parseDouble(data[1]), Double.parseDouble(data[2]), Integer.valueOf(data[3]));
-                System.out.print(data[0] + " pays ");
-                System.out.print(math.calculatePayement());
-                System.out.println(" per month.");
+                System.out.println(data[0] + " wants to borrow "+ data[1]+"€ for a period of "+data[3]+" years and pay " + math.calculatePayement()+"€ each month" );
                 return true;
             } catch (Exception e) {
                 return false;
