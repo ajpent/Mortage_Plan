@@ -12,7 +12,12 @@ public class Maths {
             this.time=time;
 
         }
-        //uses the formula provided and calculates the monthly paymenent and returns it
+
+    public double getMinterest() {
+        return minterest;
+    }
+
+    //uses the formula provided and calculates the monthly paymenent and returns it
         public String calculatePayement(){
             calculateMonthlyIntrestrate();
             double payement=amount*((minterest-1)*pow(minterest,time*12))/(pow(minterest,time*12)-1);

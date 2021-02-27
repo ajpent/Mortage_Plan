@@ -37,7 +37,7 @@ public class ReadAndCalculate {
         }
         //prints the amount of empty/wrong lines
         System.out.println("We succesfully imported "+exportedlines+" lines.");
-        System.out.println("We had "+wronglines+" lines with errors or empty lines");
+        System.out.println("We had "+wronglines+" lines with errors or empty lines.");
     }
 
 
